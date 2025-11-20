@@ -1,0 +1,54 @@
+body{
+  font-family: Arial,sans-serif;
+	background-color: hsl(50,0%,100%);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.Do{
+  box-shadow: 5px 5px 15px hsla(0,0%,0%, 0.3);
+	background-color: hsla(0,0%,0%, 0.3);
+	font-size: 18px;
+	width: 50%;
+	text-align:center;
+	font-weight: bold;
+	margin:auto;
+	border: 6px solid rgb(150, 101, 101);
+	border-radius: 10px;
+}
+
+.Search{
+	width: 50%;
+	text-align: center;
+	font-size: 2em;
+	border: 2px solid hsla(0,0%,0%, 0.8);
+	margin-top: 5px;
+	background-color: rgb(245, 181, 181);
+	margin: auto;
+}
+
+label{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+form{
+	background-color:hsl(0,0%,100%);
+	text-align: center; 
+	margin: auto;
+	padding: 25px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 15px hsla(0,0%,0%, 0.3);
+}
+
+button{
+  background-color: red;
+  color: white;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: pink;
+}
