@@ -6,18 +6,22 @@
 		<link rel= "stylesheet" href="styles.css" type="text/css">
 		<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 		<script src="app.js"></script>
-		<?php include 'superheroes.php';?>
 	</head>
+	
 	<body>
 		<div class="Do">
 			<h1>AVENGERS CHARACTER SEARCH</h1>
 		</div>
 		
 		<div class="Search">
-			<form action="" method="post">
-					<label for="character">Search by Full Name or Alias</label><br>
-					<input type="text" id="charField" name="character" value="">
+			<form action="./superheroes.php" method="get">
+					<label for="character">Search by Full Name or Alias</label>
+					<input type="text" id="field" name="character" placeholder="Enter a name or alias" title="character field">
 					<button type="button" id="charSub">Search</button>
+			</form>
 		</div>
+		<div id="result">
+			Result</div>
 	</body>
+	
 </html>

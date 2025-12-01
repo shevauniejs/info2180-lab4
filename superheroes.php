@@ -65,8 +65,30 @@ $superheroes = [
 
 ?>
 
-<ul>
-<?php foreach ($superheroes as $superhero): ?>
-  <li><?= $superhero['alias']; ?></li>
-<?php endforeach; ?>
-</ul>
+
+<?php
+if (isset($_GET['character'])) {
+	$form_name = $_GET['character'];
+	}
+    else{
+		$form_name = ""; 
+    }
+
+$found_superhero = NULL;
+$failure_response = "superhero not found";
+
+foreach ($superheroes as $superhero) {
+    if ($superhero['alias'] == $form_name) {
+        $found_superhero = $superhero;
+        break;
+    }
+}
+
+if ($found_superhero === NULL) {
+    echo '<p>'.  $failure_response . '</p>';
+} else {
+    echo '<h3>' . $found_superhero['alias'] . '</h3>';
+    echo '<h4>' . $found_superhero['name'] . '</h4>';
+    echo '<p>' . $found_superhero['biography'] . '</p>';
+}
+?>
