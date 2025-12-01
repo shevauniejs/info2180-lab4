@@ -78,7 +78,7 @@ $found_superhero = NULL;
 $failure_response = "superhero not found";
 
 foreach ($superheroes as $superhero) {
-    if ($superhero['alias'] == $form_name) {
+    if ($superhero['alias']==$form_name || $superhero['name']==$form_name) {
         $found_superhero = $superhero;
         break;
     }
